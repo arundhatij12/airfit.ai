@@ -5,7 +5,7 @@
 used all mediapipe in javacript libraries. 
 
 # Live Demo
- -https://www.youtube.com/watch?v=OG8MlOdVQfo (Allow camera access)
+ -https://youtu.be/aLBFp2tRoGI (Allow camera access)
 
 
 ## Table of content
