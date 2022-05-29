@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="shortcut icon" href='./assets/logo/favicon.png' />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.css" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.1/camera_utils.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils@0.1/control_utils.js"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.1/drawing_utils.js"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- bulma css navbar -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="index.html">
+        <img src="./assets/logo/logo.png" width="200px" height="200px" alt='logo'>
+      </a>
+    </div>
+    </div>
+  </nav>
+
+  <div class="card-content">
+    <div class="content">
+
+      <div style="display: none;" id='name_field' class="field">
+        <label class="label">Name</label>
+        <div class="control">
+          <input id="full_name" class="input" type="text" placeholder="Name">
+          <p class='help is-danger' id='name_error'></p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+          <input id="email" class="input" type="email" placeholder="Email">
+          <p class='help is-danger' id='email_error'></p>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="label">Password</label>
+        <div class="control">
+          <input id="password" class="input" type="password" placeholder="Enter Password">
+          <p class='help is-danger' id='password_error'></p>
+        </div>
+      </div>
+
+
+      <div class="field is-grouped">
+        <div class="control">
+          <button id='login' id='login' class="button is-link is-rounded">Login</button>
+        </div>
+        <div class="control">
+          <button id='register' id='register' class="button is-link is-light is-rounded">Register</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="control">
+          <button id='test_login' class="button is-link is-light is-rounded">Test Login</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+
+  <script type='module' src='./scripts/auth/auth.js'></script>
+</body>
+
+</html>

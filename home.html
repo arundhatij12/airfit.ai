@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <link rel="icon" href="./assets/logo/favicon.png">
+</head>
+
+<body>
+
+    <!-- bulma css navbar -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="home.html">
+                <img src="./assets/logo/logo.png" alt='logo'>
+            </a>
+
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item is-active" href="home.html">
+                    Home
+                </a>
+                <a class="navbar-item" href="air_piano.html">
+                    Air Piano
+                </a>
+
+                <a class="navbar-item" href="workout.html">
+                    Workout
+                </a>
+
+                <a class="navbar-item" href="colored_mirror.html">
+                    Color Mirror
+                </a>
+
+                <a class="navbar-item" href="feedback.html">
+                    Yay or Nah?
+                </a>
+                <button style="margin-top:10px;" id='auth' class="button is-info is-rounded">Log out</button>
+            </div>
+        </div>
+
+        </div>
+    </nav>
+
+    <div class="box" style="margin: 30px; width: 70vw;">
+        <h2 id='name' class="title is-2"></h2>
+        <p class="subtitle is-4">Your current streak is </p>
+        <p id='display_streak' class="title is-1 is-spaced"></p>
+        <button id='start_workout' class="button is-link is-rounded">Start Workout</button>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase-auth.js"></script>
+
+    <script type="module" src='./scripts/logOut.js'></script>
+    <script type='module' src='./scripts/home/home.js'></script>
+</body>
+
+</html>
