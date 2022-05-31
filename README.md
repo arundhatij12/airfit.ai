@@ -44,7 +44,7 @@ used all mediapipe in javacript libraries.
 - **Authentication**
   - Login or Register.
   - Get login errors
-  - Auth check in meet to **prevent unauthorized** users from using our app.
+  - Auth check on all pages to **prevent unauthorized** users from using any part of our app.
 <br></br>
 
 
