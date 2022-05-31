@@ -48,6 +48,8 @@ used all mediapipe in javacript libraries.
 <br></br>
 
 
+## Tech Stack
+
 1. Front End / Client Side / Facial recognition libraries used
    - HTML 
    - Bulma CSS
