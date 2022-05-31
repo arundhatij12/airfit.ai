@@ -1,7 +1,9 @@
 
-# Airfit.ai
-**airfit.ai** is a prototype of a fitness tracking system that uses facial recognition, pose estimation, body segmentation, selfie segmentation , holistic estimation, and control your gym experience with fluid hand gestures. FORGET THE BUTTONS
+# Airfit.ai - FORGET THE BUTTONS
+**airfit.ai** is a prototype of a next generation fitness tracking system, touchless air piano and more that uses facial recognition, pose estimation, body segmentation, selfie segmentation , holistic estimation, and control your gym experience with fluid hand gestures. FORGET THE BUTTONS, truly.
 
+ **seamless, fast and accurate detections** 
+ 
 used all mediapipe in javacript libraries && tensorflow.js pretrained Models. 
 
 ![Cover](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/airfit.png)
@@ -28,25 +30,27 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
 ## Features
 - **Pose estimation**
    - Use your left hand (index keypoint) to **gesture around the START, REST and END** workout sessions to perform these actions
-   - Use you Right hand to do bicep curl press.
-   - **Correct pose and will be highlighted by green line indicator as you exercise** .
-   - Similarly REST will stop training timer and start rest timer, during this time if you pose correctly it won't be counted or highlighted.
-   - End workout with gesture REST similarly and **get your Workout stats instantly** in the bottom Stats card.
+   - Use you Right hand to do **bicep curl press**.
+   - **Correct pose and will be highlighted by green line indicator as you exercise** This is based on the angle between your right shoulder, right    elbow and right wrist and position change on hand.
+   - At all other times the connecing line of detected keypoints will be **white** 
+   - Similarly REST will pause training timer and start rest timer, during this time even if you pose correctly it won't be counted or highlighted.
+   - End workout with gesture REST similarly and **get your Workout stats instantly** in the bottom stats card.
    - Firebase Firestore **database updates** the last workout session and shows stats including **streak** if you workout on consecutive days.
-   - exercise with a **Virtual gym background**
+   - option to switch to **Virtual gym background** for working out, everything works as above.
 
-- **Air piano** Keyless , Touchless keyless Air Piano
-  - Use right or left hand index finger to gesture on a tile and get the respective piano tune
-  - Estimates hand keypoints, use index finger only
-  -  **piano tile prototype which is gesture based ,touchless and keyless**
+- **Air piano** Keyless, Touchless keyless Air Piano
+  - Use right or left hand index finger to hover on a piano tile and get the respective piano tune
+  - Estimates hand keypoints, use index finger only.
+  -  **next gen piano tile prototype which is gesture-based ,touchless and keyless**
 
 -**Dance Mirror**
-   - Start the music and timer and get grooving with your **colored body part segmented mirror**
+   - Start the music and timer and get grooving with your **colored Full-body part segmented mirror**
    - **Seamless, fast and detects head to toe**
-   - timer to stop and resume dance and music
+   - timer and option to stop and resume dance and music.
 
 - **Gesture controlled & face expression controlled Feedback**
-   - hover your left or right hand to give positive and negative feedback
+   - hover your left or right hand to give positive and negative feedback. 
+   - Feedback sounds integrated.
    - make a happy or suprised expression for positive feedback, sad, angry or disgusted for negative 
 
 - **INTERACTIVE**
@@ -54,8 +58,8 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
 
 - **Authentication**
   - Login or Register.
-  - Get login errors
-  - Auth check on all pages to **prevent unauthorized** users from using any part of our app.
+  - Get login errors on the go if you try logging in/ registering with bad formatted email or password. or registering with already being used email.
+  - **Auth check on all pages first** to **prevent unauthorized** users from using any feature of our app.
 <br></br>
 
 
