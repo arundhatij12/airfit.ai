@@ -2,7 +2,7 @@
 # Airfit.ai
 **airfit.ai** is a prototype of a fitness tracking system that uses facial recognition, pose estimation, body segmentation, selfie segmentation , holistic estimation, and control your gym experience with fluid hand gestures. FORGET THE BUTTONS
 
-used all mediapipe in javacript libraries. 
+used all mediapipe in javacript libraries && tensorflow.js pretrained Models. 
 
 # Live Demo
  -https://youtu.be/aLBFp2tRoGI 
