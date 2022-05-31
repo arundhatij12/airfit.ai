@@ -4,6 +4,8 @@
 
 used all mediapipe in javacript libraries && tensorflow.js pretrained Models. 
 
+![Cover](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/airfit.ai)
+
 # Live Demo
  -https://youtu.be/aLBFp2tRoGI 
 
