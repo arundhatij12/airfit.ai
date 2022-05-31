@@ -53,6 +53,8 @@ used all mediapipe in javacript libraries.
 
 ## TechStack
 
+https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/tech%20stack.png
+
 1. Front End / Client Side / Facial recognition libraries used
    - HTML 
    - Bulma CSS
