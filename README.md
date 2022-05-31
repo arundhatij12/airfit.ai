@@ -5,9 +5,11 @@
 used all mediapipe in javacript libraries. 
 
 # Live Demo
- -https://youtu.be/aLBFp2tRoGI (Allow camera access)
+ -https://youtu.be/aLBFp2tRoGI 
 
-
+# Live Link
+ -https://airfitai.netlify.app/ (Allow camera access)
+ 
 ## Table of content
   - [Features](#features)
   - [TechStack](#techstack)
