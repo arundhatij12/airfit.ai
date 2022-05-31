@@ -43,18 +43,18 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
   - Estimates hand keypoints, use index finger only.
   -  **next gen piano tile prototype which is gesture-based ,touchless and keyless**
 
--**Dance Mirror**
-   - Start the music and timer and get grooving with your **colored Full-body part segmented mirror**
-   - **Seamless, fast and detects head to toe**
-   - timer and option to stop and resume dance and music.
+- **Dance Mirror**
+  - Start the music and timer and get grooving with your **colored Full-body part segmented mirror**
+  - **Seamless, fast and detects head to toe**
+  - timer and option to stop and resume dance and music.
 
 - **Gesture controlled & face expression controlled Feedback**
-   - hover your left or right hand to give positive and negative feedback. 
-   - Feedback sounds integrated.
-   - make a happy or suprised expression for positive feedback, sad, angry or disgusted for negative 
+  - hover your left or right hand to give positive and negative feedback. 
+  - Feedback sounds integrated.
+  - make a happy or suprised expression for positive feedback, sad, angry or disgusted for negative 
 
 - **INTERACTIVE**
-   - used sounds for more interactivity
+  - used sounds for more interactivity
 
 - **Authentication**
   - Login or Register.
@@ -67,7 +67,7 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
 
 ![TechStack](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/tech%20stack.png)
 
-1. Front End / Client Side / Facial recognition libraries used
+- **Front End / Client Side / Facial recognition libraries used**
    - HTML 
    - Bulma CSS
    - Mediapipe in javascript Libraries
@@ -76,7 +76,8 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
    - for feedback -> https://cdn.jsdelivr.net/npm/@mediapipe/holistic@0.1/holistic.js and face api for expression detection
    - For workout->  https://cdn.jsdelivr.net/npm/@mediapipe/pose@0.2/pose.js 
    - For virtual background-> https://cdn.jsdelivr.net/npm/@mediapipe/selfie_segmentation/selfie_segmentation.js
-2. BackEnd :
+  
+- **BackEnd**
     - Firebase Firestore Database for  Data management **workout stats and streak**
     - Firebase Authentication for Sign In / Register /Test login
     - Netlify - deployment.
