@@ -8,7 +8,7 @@ used all mediapipe in javacript libraries.
  -https://youtu.be/aLBFp2tRoGI 
 
 # Live Link
- -https://airfitai.netlify.app/ (Allow camera access)
+ -https://airfitai.netlify.app/ (Allow camera access & if u don't get database data on homepage or workout page then check for any firebase CORS blocked issue in console - if yes then use incognito mode in browser)
  
  # Project Documentation
  - https://docs.google.com/presentation/d/1cuawugNffs0e8bxs8DmYHO4PB675CFfyq9BlGEIqvkk/edit?usp=sharing
