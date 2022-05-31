@@ -10,6 +10,9 @@ used all mediapipe in javacript libraries.
 # Live Link
  -https://airfitai.netlify.app/ (Allow camera access)
  
+ # Project Documentation
+ - https://docs.google.com/presentation/d/1cuawugNffs0e8bxs8DmYHO4PB675CFfyq9BlGEIqvkk/edit?usp=sharing
+ 
 ## Table of content
   - [Features](#features)
   - [TechStack](#techstack)
