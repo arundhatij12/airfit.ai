@@ -29,7 +29,7 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
   
 ## Features
 - **Pose estimation**
-   - Use your left hand (index keypoint) to **gesture around the START, REST and END** workout sessions to perform these actions
+   - Use your left hand (index keypoint) to **gesture around the START, REST and END** workout sessions to perform these actions. NOTE -> **Hover vertically up towards the button and avoid hovering horizontally on all the buttons at once to give 1 second to the timer to start or another action to take place**
    - Use you Right hand to do **bicep curl press**.
    - **Correct pose and will be highlighted by green line indicator as you exercise** This is based on the angle between your right shoulder, right    elbow and right wrist and position change on hand.
    - At all other times the connecing line of detected keypoints will be **white** 
