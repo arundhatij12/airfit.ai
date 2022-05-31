@@ -16,8 +16,14 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
  - https://docs.google.com/presentation/d/1cuawugNffs0e8bxs8DmYHO4PB675CFfyq9BlGEIqvkk/edit?usp=sharing
  
 ## Table of content
+  - [Project Flow](#projectflow)
   - [Features](#features)
   - [TechStack](#techstack)
+
+
+## Project Flow
+
+![Project Flow](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/project%20flow.png)
   
 ## Features
 - **Pose estimation**
