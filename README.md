@@ -37,21 +37,33 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
    - End workout with gesture REST similarly and **get your Workout stats instantly** in the bottom stats card.
    - Firebase Firestore **database updates** the last workout session and shows stats including **streak** if you workout on consecutive days.
    - option to switch to **Virtual gym background** for working out, everything works as above.
+ 
+![WorkOutCurl](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/workout_correct_pose.png) 
+![WorkOutNoCurl](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/workout_no_curl.png) 
+![VirtualBackground](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/virtual%20bg.png)
+![WorkoutStatsFromDatabase](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/workout%20stats.png)
 
 - **Air piano** Keyless, Touchless keyless Air Piano
   - Use right or left hand index finger to hover on a piano tile and get the respective piano tune
   - Estimates hand keypoints, use index finger only.
   -  **next gen piano tile prototype which is gesture-based ,touchless and keyless**
 
+![AirPiano](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/air%20piano.png)
+
 - **Dance Mirror**
   - Start the music and timer and get grooving with your **colored Full-body part segmented mirror**
   - **Seamless, fast and detects head to toe**
   - timer and option to stop and resume dance and music.
 
+![DanceMirror](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/Dance%20mirror.png)
+
 - **Gesture controlled & face expression controlled Feedback**
   - hover your left or right hand to give positive and negative feedback. 
   - Feedback sounds integrated.
   - make a happy or suprised expression for positive feedback, sad, angry or disgusted for negative 
+
+![Feedback_hand](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/FEEDBACK_HAND.png)
+![Feedback_face](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/feedback_FACE.png)
 
 - **INTERACTIVE**
   - used sounds for more interactivity
@@ -60,6 +72,9 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
   - Login or Register.
   - Get login errors on the go if you try logging in/ registering with bad formatted email or password. or registering with already being used email.
   - **Auth check on all pages first** to **prevent unauthorized** users from using any feature of our app.
+
+![Auth_errors_displayed](https://github.com/arundhatij12/airfit.ai/blob/master/assets/images/login%20error.png)
+
 <br></br>
 
 
