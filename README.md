@@ -48,7 +48,7 @@ used all mediapipe in javacript libraries.
 <br></br>
 
 
-## Tech Stack
+## TechStack
 
 1. Front End / Client Side / Facial recognition libraries used
    - HTML 
