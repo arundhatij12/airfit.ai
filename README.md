@@ -21,6 +21,7 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
   - [ProjectFlow](#projectflow)
   - [Features](#features)
   - [TechStack](#techstack)
+  - [LocalSetup](#localsetup)
 
 
 ## ProjectFlow
@@ -96,3 +97,12 @@ used all mediapipe in javacript libraries && tensorflow.js pretrained Models.
     - Firebase Firestore Database for  Data management **workout stats and streak**
     - Firebase Authentication for Sign In / Register /Test login
     - Netlify - deployment.
+
+
+## LocalSetup 
+
+1 .Clone the repository using the command : git clone https://github.com/arundhatij12/airfit.ai.git
+2. Open index.html
+
+You're good to go!
+    
