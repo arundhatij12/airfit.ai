@@ -111,7 +111,7 @@ function getUser(user) {
       .doc(firebaseUserId)
       .get()
       .then((doc) => {
-        //set stats data by getting these fields from the document
+        //set stats data by getting these fields from the document from database for that user 
         stat_sets = doc.data().sets;
         stat_reps = doc.data().reps;
         stat_training_time = doc.data().training_time;
@@ -148,7 +148,9 @@ function useVirtualBg() {
 //call the start training timer  ( when ur left hand gestures on START on canvas  )
 function startTrainingTimer() {
   isRestTimerRunning = false; //when training timer running ,  rest timer should not run
+  
   if (!isTrainingTimerRunning && !isRestTimerRunning) {
+    
     startTrainingTimerId = setInterval(() => {
       const trainingTime = timer(trainingTimeHr, trainingTimeMin, trainingTimeSec);
 
@@ -157,14 +159,14 @@ function startTrainingTimer() {
       training_time_minute = trainingTime[1]
       training_time_second = trainingTime[2]
     }, 1000);
-    isTrainingTimerRunning = true;
-    pauseTimer(startRestTimerId);
-  }
+    isTrainingTimerRunning = true; //training timer running flag being set to true
+    pauseTimer(startRestTimerId);  //pause the rest timer when training timer is running
+  }g
 }
 
 //pause training timer will start rest timer / starting rest timer will pause training timer
 function startRestTimer() {
-  isTrainingTimerRunning = false;
+  isTrainingTimerRunning = false;  //when rest timer running, training timer should not run
   if (!isRestTimerRunning) {
     startRestTimerId = setInterval(() => {
       const restTime = timer2(restTimeHr, restTimeMin, restTimeSec);
@@ -174,8 +176,8 @@ function startRestTimer() {
       rest_time_minute = restTime[1];
       rest_time_second = restTime[2];
     }, 1000);
-    isRestTimerRunning = true;
-    pauseTimer(startTrainingTimerId);
+    isRestTimerRunning = true;   //rest timer running flag being set to true
+    pauseTimer(startTrainingTimerId);    //pause the training timer when rest timer is running
   }
 }
 
@@ -201,27 +203,30 @@ function reset() {
     //adding a new document (row) to firebase database so that it gets added to total stats before resetting the stat parameters for new session
     db.collection('users')
       .doc(firebaseUserId)
-      .update({
+      .update({. //updating stat related fields once user gestures on end workout
         reps: count,
         sets: set,
-        streak: calculateStreak(),
-        workout_done_today: true,
-        training_time: convertTimeIntoSeconds(training_time_hour, training_time_minute, training_time_second),
-        rest_time: convertTimeIntoSeconds(rest_time_hour, rest_time_minute, rest_time_second),
+        streak: calculateStreak(), 
+        workout_done_today: true,  //work out done today flag true if you end/reset workout
+        training_time: convertTimeIntoSeconds(training_time_hour, training_time_minute, training_time_second),  //storing training time in seconds into database
+        rest_time: convertTimeIntoSeconds(rest_time_hour, rest_time_minute, rest_time_second),  //storing rest time in seconds into database
         date: dateTracker ?? getDayOfYear(), //if user is new , then use current day of the year to start keeping a date tracker
       })
       .then(() => {
         //reset to default state/initial state
         resetStats()
 
-        //move to utils
+       
         set = 0
         reps = 0
         position = 'none'
+        
+        //render reset state on DOM 
         setRef.innerHTML = set;
         repRef.innerHTML = reps;
         positionRef.innerHTML = position;
 
+        //no timers should run when reset 
         isTrainingTimerRunning = false;
         isRestTimerRunning = false;
       });
@@ -239,22 +244,25 @@ function reset() {
 }
 
 function curlCounter(angle) {
-  reps = count % 10;
+  
+  reps = count % 10;  //count stores total number of repetitions while reps is wrt to the set , say count is 12 , then reps will be 2 for set 2.
 
+  //calculation of position and pose based on angle 
   if (angle > 160) {
     position = 'down';
-    correctPoseHighlight = false;
+    correctPoseHighlight = false;  // this is not correct pose so connecting line won't be highlighted as green but remain default white
   } else if (angle < 30 && position === 'down') {
-    correctPoseHighlight = true;
+    correctPoseHighlight = true;  //this is correct pose and connecting line color will change from white to GREEN
     position = 'up';
-    count = count + 1;
+    count = count + 1; //correct pose so count increases by 1
   }
 
+  //display above on DOM
   setRef.innerHTML = set;
   repRef.innerHTML = reps;
   positionRef.innerHTML = position;
 
-  //update set after every 10 reps
+  //update set by 1 after every 10 reps
   if (count > 0) {
     for (var i = 1; i < 10; i++) {
       if (count > (i - 1) * 10 && count < i * 10) {
@@ -292,6 +300,7 @@ function onResultsPose(results) {
   canvasCtx5.clearRect(0, 0, out5.width, out5.height);
   canvasCtx5.drawImage(results.image, 0, 0, out5.width, out5.height);
 
+  //getting x-y, coordinates for your right shoulder, elbow and wrist. the camera is lateral so left keypoints is written
   const shoulders = [results.poseLandmarks[POSE_LANDMARKS.LEFT_SHOULDER].x, results.poseLandmarks[POSE_LANDMARKS.LEFT_SHOULDER].y];
   const elbow = [results.poseLandmarks[POSE_LANDMARKS.LEFT_ELBOW].x, results.poseLandmarks[POSE_LANDMARKS.LEFT_ELBOW].y];
   const wrist = [results.poseLandmarks[POSE_LANDMARKS.LEFT_WRIST].x, results.poseLandmarks[POSE_LANDMARKS.LEFT_WRIST].y];
@@ -350,7 +359,7 @@ pose.onResults(onResultsPose);
 
 const camera = new Camera(video5, {
   onFrame: async () => {
-    await pose.send({ image: video5 });
+    await pose.send({ image: video5 }); //when camera loaded then send your input video to the pose estimator 
     isVirtualBgActive && (await selfieSegmentation.send({ image: video5 })); //use virtual bg only when btn clicked
   },
   width: WIDTH,
