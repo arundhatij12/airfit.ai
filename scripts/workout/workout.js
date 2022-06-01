@@ -161,7 +161,7 @@ function startTrainingTimer() {
     }, 1000);
     isTrainingTimerRunning = true; //training timer running flag being set to true
     pauseTimer(startRestTimerId);  //pause the rest timer when training timer is running
-  }g
+  }
 }
 
 //pause training timer will start rest timer / starting rest timer will pause training timer
