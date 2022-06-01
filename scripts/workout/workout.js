@@ -203,7 +203,7 @@ function reset() {
     //adding a new document (row) to firebase database so that it gets added to total stats before resetting the stat parameters for new session
     db.collection('users')
       .doc(firebaseUserId)
-      .update({. //updating stat related fields once user gestures on end workout
+      .update({ //updating stat related fields once user gestures on end workout
         reps: count,
         sets: set,
         streak: calculateStreak(), 
