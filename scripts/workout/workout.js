@@ -214,9 +214,7 @@ function reset() {
       })
       .then(() => {
         //reset to default state/initial state
-        resetStats()
-
-       
+        resetStats()       
         set = 0
         reps = 0
         position = 'none'
@@ -237,14 +235,11 @@ function reset() {
 
     //resetting both timers
     resetTimer(trainingTimeHr, trainingTimeMin, trainingTimeSec);
-
     resetTimer2(restTimeHr, restTimeMin, restTimeSec)
-
   }
 }
 
 function curlCounter(angle) {
-  
   reps = count % 10;  //count stores total number of repetitions while reps is wrt to the set , say count is 12 , then reps will be 2 for set 2.
 
   //calculation of position and pose based on angle 
