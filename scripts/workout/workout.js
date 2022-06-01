@@ -85,7 +85,7 @@ function resetStats() {
   position = 'none'
 }
 
-redirectToLoginIfUserIsNotLoggedIn() //on page load check if user logged in
+redirectToLoginIfUserIsNotLoggedIn() //on page load check if user logged in, if not redirect to login pg
 
 // listen for auth status changes
 auth.onAuthStateChanged((user) => {
@@ -111,7 +111,7 @@ function getUser(user) {
       .doc(firebaseUserId)
       .get()
       .then((doc) => {
-        //if the document for this user contains above field set it below and display on DOM
+        //set stats data by getting these fields from the document
         stat_sets = doc.data().sets;
         stat_reps = doc.data().reps;
         stat_training_time = doc.data().training_time;
@@ -121,7 +121,7 @@ function getUser(user) {
         workOutDoneToday = doc.data().workout_done_today
         fullName = doc.data().full_name
 
-        //displaying it on DOM (incase of a new user document won't contain sets/reps/tt/rt fields so 0 will be rendered on DOM)
+        //displaying it on DOM (incase of a new user document won't contain sets/reps/tt/rt fields so those will be undefined and fallback value 0 will be rendered on DOM)
         statSets.innerHTML = stat_sets ?? 0;
         statReps.innerHTML = stat_reps ?? 0;
         statTrainingTime.innerHTML = convertTimeFromSeconds(stat_training_time ?? 0);
@@ -147,7 +147,7 @@ function useVirtualBg() {
 
 //call the start training timer  ( when ur left hand gestures on START on canvas  )
 function startTrainingTimer() {
-  isRestTimerRunning = false;
+  isRestTimerRunning = false; //when training timer running ,  rest timer should not run
   if (!isTrainingTimerRunning && !isRestTimerRunning) {
     startTrainingTimerId = setInterval(() => {
       const trainingTime = timer(trainingTimeHr, trainingTimeMin, trainingTimeSec);
