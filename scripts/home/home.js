@@ -1,10 +1,12 @@
 import { auth, db } from '../firebase.config.js'
 import { goToWorkOut } from '../utils/redirect.js'
 import { redirectToLoginIfUserIsNotLoggedIn } from '../redirectToLoginIfNotLoggedIn.js';
+import { displayNone } from '../utils/domFunctions.js'
 
 const startWorkoutBtn = document.getElementById('start_workout')
 const streak = document.getElementById('display_streak')
 const name = document.getElementById('name')
+const loader = document.getElementById('loader')
 
 let userId;
 
@@ -22,6 +24,7 @@ function getUserData() {
                 .doc(userId) //search document with the docId as userID
                 .get() //get data
                 .then((doc) => {
+                    displayNone(loader) //hide the loader once document loads the fields
                     streak.innerHTML = doc.data().streak ?? 0 //get streak from database and show on DOM , if new user then streak won't be present as a field in database so set as 0
                     name.innerHTML = 'Welcome ' + doc.data().full_name //get name from database
                 })
