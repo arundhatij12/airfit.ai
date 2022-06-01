@@ -90,7 +90,7 @@ redirectToLoginIfUserIsNotLoggedIn() //on page load check if user logged in, if 
 // listen for auth status changes
 auth.onAuthStateChanged((user) => {
   if (user) {
-    db.collection('users').onSnapshot(
+    db.collection('users').onSnapshot(   //get a snapshot of the contents of database
       () => {
         getUser(user); //when user is logged in call getUser function with user object passed as a parameter
       },
@@ -108,8 +108,8 @@ function getUser(user) {
   if (user) {
     firebaseUserId = user.uid;
     db.collection('users')
-      .doc(firebaseUserId)
-      .get()
+      .doc(firebaseUserId) //query database for document with that user id
+      .get()  //get data from database
       .then((doc) => {
         //set stats data by getting these fields from the document from database for that user 
         stat_sets = doc.data().sets;
